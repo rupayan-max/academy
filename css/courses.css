@@ -1,0 +1,143 @@
+/* ========================================
+   1. VARIABLES & BASE SETUP
+======================================== */
+:root {
+    --primary-color: rgb(22, 4, 100);
+    --accent-color: rgb(94, 94, 187);
+    --card-bg: rgb(82, 142, 114);
+    --text-light: #ffffff;
+    --text-dark: #000000;
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    
+    /* Responsive Spacing & Typography using clamp */
+    /* clamp(min, preferred, max) */
+    --section-padding: clamp(2rem, 5vw, 5rem);
+    --h1-size: clamp(2.5rem, 8vw, 4.5rem);
+    --p-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ========================================
+   2. HERO SECTION (Optimized)
+======================================== */
+.hero_container {
+    width: 100%;
+    min-height: 70vh; /* Better than fixed height for mobile content */
+    background: 
+        linear-gradient(rgba(192, 151, 200, 0.5), rgba(192, 151, 200, 0.5)),
+        url("/images/courses_page_banner.jpg");
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll; /* Changed from fixed: fixed background causes performance issues on mobile */
+    display: flex;
+    align-items: center;
+    padding: var(--section-padding) 5%;
+}
+
+@media (min-width: 1024px) {
+    .hero_container { background-attachment: fixed; } /* Re-enable for desktop only */
+}
+
+.courses_content {
+    max-width: 1000px;
+    width: 100%;
+}
+
+.hero_course_title {
+    font-size: var(--h1-size);
+    color: var(--primary-color);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.hero_course_desc {
+    font-size: var(--p-size);
+    color: var(--primary-color);
+    max-width: 600px; /* Limits line length for better readability */
+    line-height: 1.6;
+}
+
+/* ========================================
+   3. COURSE GRID (Responsive Design)
+======================================== */
+.our_courses_container {
+    padding: var(--section-padding) 5%;
+}
+
+.all_course_grid {
+    display: grid;
+    /* Auto-fit creates as many columns as possible without dropping below 280px */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Course Card Item */
+.course_first {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    border-radius: 1rem;
+    background-color: var(--card-bg);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    transition: var(--transition);
+    height: 100%; /* Ensures all cards in a row are same height */
+}
+
+.course_first:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.course_image {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Maintains perfect proportions on all screens */
+    object-fit: cover;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.course_name {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-light);
+}
+
+.course_desc_card {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.5;
+    flex-grow: 1; /* Pushes the button to the bottom if text is short */
+}
+
+/* Button Styles */
+.enroll_now_cont {
+    padding-top: 1.5rem;
+}
+
+.enroll_btn {
+    display: block; /* Full width on mobile is usually better */
+    background-color: var(--accent-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.enroll_btn:hover {
+    background-color: var(--primary-color);
+}
