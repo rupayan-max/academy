@@ -67,6 +67,57 @@
     color: var(--my-custom-color);
     font-weight: 500;
 }
+/* --- Desktop Defaults --- */
+.menu_icon {
+    display: none; /* Hidden on desktop */
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: #333;
+    transition: 0.3s;
+}
+
+/* --- Mobile Styles (Breakdown at 768px) --- */
+@media screen and (max-width: 768px) {
+    .menu_icon {
+        display: block; /* Shows the hamburger bars */
+        z-index: 1001; /* Stays above the menu drawer */
+    }
+
+    .navlist {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Keeps menu hidden to the right */
+        width: 280px; /* Width of the side menu */
+        height: 100vh;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        transition: 0.5s ease-in-out;
+        box-shadow: -10px 0 20px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    /* This class is added via JavaScript when clicked */
+    .navlist.active {
+        right: 0; 
+    }
+
+    .navlist_item {
+        font-size: 1.2rem;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    /* Optional: Dim background when menu is open */
+    .nav_container::after {
+        content: "";
+        display: none;
+    }
+}
 
 /* ================= HERO ================= */
 .hero_container {
