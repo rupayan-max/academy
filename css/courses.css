@@ -8,7 +8,7 @@
     --text-light: #ffffff;
     --text-dark: #000000;
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    
+
     /* Responsive Spacing & Typography using clamp */
     /* clamp(min, preferred, max) */
     --section-padding: clamp(2rem, 5vw, 5rem);
@@ -21,7 +21,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: "Inter", sans-serif;
+    font-family: "Playwrite NZ Basic", cursive;
 }
 
 img {
@@ -34,21 +34,27 @@ img {
 ======================================== */
 .hero_container {
     width: 100%;
-    min-height: 70vh; /* Better than fixed height for mobile content */
-    background: 
+    min-height: 70vh;
+    /* Better than fixed height for mobile content */
+    background:
         linear-gradient(rgba(192, 151, 200, 0.5), rgba(192, 151, 200, 0.5)),
-        url("/images/courses_page_banner.jpg");
+        url("/academy/images/courses_page_banner.jpg");
     background-blend-mode: multiply;
     background-position: center;
     background-size: cover;
-    background-attachment: scroll; /* Changed from fixed: fixed background causes performance issues on mobile */
+    background-attachment: scroll;
+    /* Changed from fixed: fixed background causes performance issues on mobile */
     display: flex;
     align-items: center;
     padding: var(--section-padding) 5%;
 }
 
 @media (min-width: 1024px) {
-    .hero_container { background-attachment: fixed; } /* Re-enable for desktop only */
+    .hero_container {
+        background-attachment: fixed;
+    }
+
+    /* Re-enable for desktop only */
 }
 
 .courses_content {
@@ -66,7 +72,8 @@ img {
 .hero_course_desc {
     font-size: var(--p-size);
     color: var(--primary-color);
-    max-width: 600px; /* Limits line length for better readability */
+    max-width: 600px;
+    /* Limits line length for better readability */
     line-height: 1.6;
 }
 
@@ -75,6 +82,15 @@ img {
 ======================================== */
 .our_courses_container {
     padding: var(--section-padding) 5%;
+}
+
+.heading_all_courses {
+    text-align: center;
+    padding: 1.5rem 0;
+    padding-top: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: blueviolet;
 }
 
 .all_course_grid {
@@ -93,7 +109,8 @@ img {
     background-color: var(--card-bg);
     border: 1px solid rgba(0, 0, 0, 0.15);
     transition: var(--transition);
-    height: 100%; /* Ensures all cards in a row are same height */
+    height: 100%;
+    /* Ensures all cards in a row are same height */
 }
 
 .course_first:hover {
@@ -103,7 +120,8 @@ img {
 
 .course_image {
     width: 100%;
-    aspect-ratio: 16 / 9; /* Maintains perfect proportions on all screens */
+    aspect-ratio: 16 / 9;
+    /* Maintains perfect proportions on all screens */
     object-fit: cover;
     border-radius: 0.75rem;
     margin-bottom: 1rem;
@@ -119,7 +137,8 @@ img {
     color: var(--text-light);
     font-size: 1rem;
     line-height: 1.5;
-    flex-grow: 1; /* Pushes the button to the bottom if text is short */
+    flex-grow: 1;
+    /* Pushes the button to the bottom if text is short */
 }
 
 /* Button Styles */
@@ -128,7 +147,8 @@ img {
 }
 
 .enroll_btn {
-    display: block; /* Full width on mobile is usually better */
+    display: block;
+    /* Full width on mobile is usually better */
     background-color: var(--accent-color);
     padding: 0.8rem 1.5rem;
     border-radius: 0.5rem;
