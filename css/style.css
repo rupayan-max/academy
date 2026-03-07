@@ -55,8 +55,9 @@
     justify-content: space-around;
     align-items: center;
 }
+
 @media screen and (max-width:576px) {
-    .navlist{
+    .navlist {
         display: none;
     }
 }
@@ -67,9 +68,11 @@
     color: var(--my-custom-color);
     font-weight: 500;
 }
+
 /* --- Desktop Defaults --- */
 .menu_icon {
-    display: none; /* Hidden on desktop */
+    display: none;
+    /* Hidden on desktop */
     font-size: 1.6rem;
     cursor: pointer;
     color: #333;
@@ -79,15 +82,19 @@
 /* --- Mobile Styles (Breakdown at 768px) --- */
 @media screen and (max-width: 768px) {
     .menu_icon {
-        display: block; /* Shows the hamburger bars */
-        z-index: 1001; /* Stays above the menu drawer */
+        display: block;
+        /* Shows the hamburger bars */
+        z-index: 1001;
+        /* Stays above the menu drawer */
     }
 
     .navlist {
         position: fixed;
         top: 0;
-        right: -100%; /* Keeps menu hidden to the right */
-        width: 280px; /* Width of the side menu */
+        right: -100%;
+        /* Keeps menu hidden to the right */
+        width: 280px;
+        /* Width of the side menu */
         height: 100vh;
         background-color: #ffffff;
         display: flex;
@@ -102,7 +109,7 @@
 
     /* This class is added via JavaScript when clicked */
     .navlist.active {
-        right: 0; 
+        right: 0;
     }
 
     .navlist_item {
@@ -123,27 +130,33 @@
 .hero_container {
     width: 100%;
     height: 500px;
-    background: url("/academy/images/herobanner.jpg"),
-        rgba(93, 3, 111, 0.893);
+    background:
+        linear-gradient(rgba(45, 7, 52, 0.907), rgb(210, 218, 228)),
+        url("/images/herobanner.jpg");
     background-blend-mode: multiply;
     background-position: left center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    filter: brightness(80%);
 }
-@media screen and (max-width:576px){
-    .hero_container{
-       width: 100%;
-       height: auto;
-    background: url("/academy/images/herobanner.jpg"),
-        rgba(93, 3, 111, 0.5);
-    background-blend-mode: multiply;
-    background-position: bottom, center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed; 
-    }    
+
+@media screen and (max-width:576px) {
+    .hero_container {
+        width: 100%;
+        height: auto;
+        background:
+            linear-gradient(rgba(45, 7, 52, 0.907), rgb(210, 218, 228)),
+            url("/images/herobanner.jpg");
+        background-blend-mode: multiply;
+        background-position: bottom, center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        filter: brightness(80%);
+    }
 }
+
 .hero_content {
     width: 90%;
     margin: auto;
@@ -155,11 +168,13 @@
     color: white;
     padding-bottom: 1rem;
 }
-@media screen and (max-width:576px){
-    .hero_heading{
+
+@media screen and (max-width:576px) {
+    .hero_heading {
         font-size: 2.5rem;
     }
 }
+
 .hero_sub_heading {
     font-size: 2rem;
     color: white;
@@ -171,10 +186,12 @@
     color: white;
     padding-bottom: 1rem;
 }
-@media screen and (max-width:576px){
+
+@media screen and (max-width:576px) {
     .hero_sub_heading {
         font-size: 1rem;
     }
+
     .hero_sub_heading_2 {
         display: none;
     }
@@ -197,11 +214,13 @@
 }
 
 @media screen and (max-width:576px) {
-   .exp_btn,
-.exp_btn2{
-    font-size: 0.9rem;
-} 
+
+    .exp_btn,
+    .exp_btn2 {
+        font-size: 0.9rem;
+    }
 }
+
 /* ================= SCROLL DOWN ================= */
 .scroll_down_container {
     width: 100%;
@@ -227,12 +246,14 @@
     display: flex;
     justify-content: space-between;
 }
-@media screen and (max-width:576px){
-       .about_us_content{
+
+@media screen and (max-width:576px) {
+    .about_us_content {
         display: flex;
         flex-direction: column-reverse;
-       }
+    }
 }
+
 .left_side_about {
     width: 50%;
     display: flex;
@@ -268,50 +289,57 @@
     color: var(--my-custom-color);
     font-weight: 600;
 }
+
 @media screen and (max-width:576px) {
-    .about_us_container{
-        height:auto;
+    .about_us_container {
+        height: auto;
         padding: 2rem;
     }
-    .about_heading{
-         font-size: 1.5rem;
-         padding-bottom: 1rem;
-    }  
-    .right_side_about{
+
+    .about_heading {
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .right_side_about {
         width: 100%;
-    } 
-    .aboutus_right_pic{
-        width:100%;
     }
-    .left_side_about{
-      width:100%;
+
+    .aboutus_right_pic {
+        width: 100%;
     }
-    .about_desc{
+
+    .left_side_about {
+        width: 100%;
+    }
+
+    .about_desc {
         font-size: 1rem;
     }
-    .read_about_cont{
-    
+
+    .read_about_cont {
+
         margin-top: 2rem;
     }
 }
+
 /* ================= ABOUT GRID ================= */
 .about_us_grid_cont {
     width: 100%;
     height: 60vh;
     padding: 1rem 0;
-    background: url(/academy/images/women_home.jpg), rgba(63, 7, 103, 0.5);
-    background-position: right, center; 
+    background:
+        linear-gradient(rgba(63, 7, 103, 0.5), rgba(63, 7, 103, 0.5)),
+        url("/images/women_home.jpg");
+    background-position: right, center;
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: multiply;
     background-attachment: fixed;
 }
-@media screen and (max-width:576px) {
-      .about_us_grid_cont{
-        height:auto;
-        padding: 4rem 0;
-      }  
-}
+
+
+
 .about_us_grid_content {
     width: 90%;
     margin: auto;
@@ -323,14 +351,8 @@
     padding: 4.5rem 0;
 }
 
-@media screen and (max-width:576px){
-      .mission_vission_grid{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        padding: 0rem 0;
-        row-gap: 2rem;
-      } 
-}
+
+
 .grid_box {
     text-align: center;
     display: flex;
@@ -361,10 +383,25 @@
     font-weight: 500;
 }
 
-@media screen and (max-width:576px){
-    .card_desc{
+@media screen and (max-width:576px) {
+    .about_us_grid_cont {
+        height: auto;
+        padding: 4rem 0;
+    }
+}
+@media screen and (max-width:576px) {
+    .mission_vission_grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0rem 0;
+        row-gap: 2rem;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .card_desc {
         font-size: 1rem;
-    }    
+    }
 }
 
 /* Our popular courses start */
@@ -384,7 +421,7 @@
     font-size: 2.5rem;
     text-align: center;
     padding-bottom: 2rem;
-    color:blueviolet;
+    color: blueviolet;
 }
 
 .our_courses_grid {
@@ -395,11 +432,12 @@
     row-gap: 1rem;
 
 }
-@media screen and (max-width:576px){
-       .our_courses_grid{
+
+@media screen and (max-width:576px) {
+    .our_courses_grid {
         display: grid;
-        grid-template-columns: repeat(1,1fr);
-       } 
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .C_grid {
@@ -527,12 +565,14 @@
 .left_letter {
     width: 50%;
 }
+
 @media screen and (max-width:576px) {
-    .left_letter{
+    .left_letter {
         display: none;
     }
-    
+
 }
+
 .newsimage {
     width: 90%;
     height: 40vh;
@@ -585,11 +625,12 @@
     color: var(--my-custom-color);
 }
 
-@media screen and (max-width:576px){
-    .right_letter{
+@media screen and (max-width:576px) {
+    .right_letter {
         width: 100%;
     }
-    .news_email{
+
+    .news_email {
         display: none;
     }
 }
@@ -614,13 +655,15 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2rem;
 }
-@media screen and (max-width:576px){
-    .footer_grid{
+
+@media screen and (max-width:576px) {
+    .footer_grid {
         display: grid;
-        grid-template-columns: repeat(1,1fr);
-        row-gap: 2rem;    
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 2rem;
     }
 }
+
 .grid_one,
 .grid_two,
 .grid_third {
