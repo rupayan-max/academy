@@ -1,0 +1,133 @@
+/* Global Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Playwrite NZ Basic", cursive;
+}
+
+:root {
+    --my-custom-color: rgb(22, 4, 100);
+    --theme-second-color: #C0C0C0;
+}
+
+/* Python Hero  Section start */
+.python_hero_container {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to right, rgb(22, 4, 100), white);
+}
+
+.python_hero_content {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.python_heading {
+    color: white;
+}
+
+.python_sub_title {
+    color: white;
+}
+
+.ratings_cont {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.ratings {
+    color: white;
+}
+
+.ratings_star {
+    color: yellow;
+    padding-left: 0.5rem;
+}
+
+.student_enrolled {
+    color: white;
+}
+
+.eligibility {
+    color: white;
+}
+
+.python_desc {
+    width: 70%;
+    color: white;
+
+}
+
+/* Python Hero  Section stop */
+
+/* Learn section start here  */
+.learn_container{
+    width: 100%;
+    height: auto;
+
+}
+.learn_content{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+}
+
+/* Left Container start */
+.left_learn_container{
+    width:50%;
+
+}
+.skill_you_learn{
+    width: 100%;
+    padding: 2rem 0 ;
+}
+.sul_heading{
+    color:var(--my-custom-color);
+}
+.skill_learn_grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 2rem;
+    row-gap: 0.5rem;
+    padding: 1rem 0;
+}
+.skill_text{
+    color:var(--my-custom-color);
+    font-weight: 550;
+}
+.skill_tick{
+    color:blue;
+    padding-right: 0.5rem;
+}
+/* Learn section start here  */
+
+/* What You Learn section Start */
+.module_container{
+    width: 100%;
+    padding: 0rem 0;
+}
+.module_content{
+    
+    
+}
+.faqbox{
+    margin-bottom: 0.5rem;
+    border-radius: 1rem;
+    background-color: var(--theme-second-color);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+/* What You Learn section stop */
+/* Left Container Stop */

@@ -338,8 +338,6 @@
     background-attachment: fixed;
 }
 
-
-
 .about_us_grid_content {
     width: 90%;
     margin: auto;
@@ -350,8 +348,6 @@
     grid-template-columns: repeat(4, 1fr);
     padding: 4.5rem 0;
 }
-
-
 
 .grid_box {
     text-align: center;
